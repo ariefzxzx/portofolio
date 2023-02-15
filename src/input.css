@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+.hamburger-line{
+    @apply w-[30px] h-[2px] block bg-dark my-2 dark:bg-white;
+}
+
+.hamburger-active > span:nth-child(1){
+    @apply  rotate-45;
+}
+.hamburger-active > span:nth-child(2){
+    @apply scale-0;
+}
+.hamburger-active > span:nth-child(3){
+    @apply  -rotate-45;
+}
+
+
+.navbar-fixed{
+    @apply fixed z-[999] bg-white bg-opacity-80 backdrop-blur-lg dark:bg-dark dark:bg-opacity-60;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all .3s ease-in;
+}
+
+
+
+#dark-toggle:checked ~ label div.toggle-circle{
+    @apply translate-x-3;
+}
